@@ -87,6 +87,19 @@ data_Lemna_spacy = data.copy()
 4       python is the best tool. i like it
 
 
+from nltk.stem import PorterStemmer
+st =PorterStemmer()
+data_Stemming_pt ['Text'] = data_Stemming_pt['Text'].apply(lambda x:" ".join([st.stem(w)for w in word_tokenize(x)]))
+print(data_Stemming_pt)
+
+ Text
+0          an introduct to text analysi .
+1  thi 's a good exampl of text analysi !
+2                  i am interest in nlp .
+3         machin learn is veri interest .
+4     python is the best tool . i like it
+
+
 
 
 
